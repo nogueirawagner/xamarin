@@ -1,6 +1,6 @@
 ﻿using SQLite;
 
-namespace App.MapeamentoRelacional
+namespace App.DAL
 {
   public interface XIDatabase
   {

@@ -41,9 +41,9 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MapeamentoRelacional\TarefaDAL\XTarefaDAL.cs" />
-    <Compile Include="MapeamentoRelacional\XIDatabase.cs" />
-    <Compile Include="MapeamentoRelacional\TarefaDAL\XITarefaDAL.cs" />
+    <Compile Include="DAL\TarefaDAL\XTarefaDAL.cs" />
+    <Compile Include="DAL\XIDatabase.cs" />
+    <Compile Include="DAL\TarefaDAL\XITarefaDAL.cs" />
     <Compile Include="Models\Tarefa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\XBooleanConvert.cs" />

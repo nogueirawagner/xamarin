@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Forms;
 
-namespace App.MapeamentoRelacional.TarefaDAL
+namespace App.DAL.TarefaDAL
 {
   public class XTarefaDAL : XITarefaDAL
   {
     private SQLiteConnection _db;
 
-    public XTarefaDAL(SQLiteConnection db) 
+    public XTarefaDAL() 
     {
       _db = DependencyService.Get<XIDatabase>().GetConnection();
       _db.CreateTable<Tarefa>();

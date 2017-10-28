@@ -11,11 +11,29 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <!--<StackLayout Orientation="Horizontal" >
+            <StackLayout Orientation="Horizontal" >
                 <Entry Text="{Binding TarefaAtual.Nome}" Placeholder="Nome Tarefa" HorizontalOptions="FillAndExpand"></Entry>
                 <Button Command="{Binding SalvarCommand}" Text="Salvar" />
-            </StackLayout>-->
-            
+            </StackLayout>
+            <Label Text="Tarefas" HorizontalOptions="Center" FontAttributes="Bold" Font="24"></Label>
+
+            <ListView x:Name="ListaTarefas" ItemsSource="{Binding Tarefas}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Remover" CommandParameter="{Binding .}"/>
+                                <MenuItem Text="Editar" CommandParameter="{Binding .}"/>
+                            </ViewCell.ContextActions>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding TarefaAtual.Nome}" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+                                <Button Text="{Binding Finalizado, Converter={StaticResource cvTarefa}}"  CommandParameter="{Binding .}" HorizontalOptions="End" ></Button>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,6 +1,6 @@
 ﻿
 using App.Droid.Database;
-using App.MapeamentoRelacional;
+using App.DAL;
 using SQLite;
 using System;
 using System.IO;
