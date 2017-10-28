@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace App.ViewModels
 {
-  class XTarefaViewModel
+  public class XTarefaViewModel
   {
   }
 }

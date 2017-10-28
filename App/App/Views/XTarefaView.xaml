@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.Views.XTarefaView"
+             xmlns:convert="clr-namespace:App.Utils">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <convert:XTarefaConverter x:Key="cvTarefa"></convert:XTarefaConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <!--<StackLayout Orientation="Horizontal" >
+                <Entry Text="{Binding TarefaAtual.Nome}" Placeholder="Nome Tarefa" HorizontalOptions="FillAndExpand"></Entry>
+                <Button Command="{Binding SalvarCommand}" Text="Salvar" />
+            </StackLayout>-->
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
