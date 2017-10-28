@@ -1,4 +1,5 @@
 ﻿
+using App.Views;
 using Xamarin.Forms;
 
 namespace App
@@ -9,7 +10,7 @@ namespace App
     {
       InitializeComponent();
 
-      MainPage = new MainPage();
+      MainPage = new NavigationPage(new XTarefaView());
     }
 
     protected override void OnStart()

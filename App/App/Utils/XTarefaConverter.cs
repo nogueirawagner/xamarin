@@ -12,9 +12,9 @@ namespace App.Utils
     public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
       if ((bool)value)
-        return "Aberto";
-      else
         return "Finalizado";
+      else
+        return "Aberto";
     }
   }
 }

@@ -27,8 +27,8 @@
                             </ViewCell.ContextActions>
 
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding TarefaAtual.Nome}" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
-                                <Button Text="{Binding Finalizado, Converter={StaticResource cvTarefa}}"  CommandParameter="{Binding .}" HorizontalOptions="End" ></Button>
+                                <Label Text="{Binding Nome}" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+                                <Button Text="{Binding Concluido, Converter={StaticResource cvTarefa}}" Command="{Binding AlterarEstadoCommand}"  CommandParameter="{Binding .}" HorizontalOptions="End" ></Button>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
