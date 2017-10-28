@@ -8,5 +8,8 @@ namespace App.Models
 {
   public class Tarefa
   {
+    public int ID { get; set; }
+    public String Nome { get; set; }
+    public Boolean Concluido { get; set; }
   }
 }
