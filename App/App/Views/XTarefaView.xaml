@@ -19,11 +19,13 @@
                        HorizontalOptions="FillAndExpand"
                        HorizontalTextAlignment="Start"
                        VerticalOptions="Center"/>
-                <Button Command="{Binding SalvarCommand}" Text="Salvar" />
+                <Button Command="{Binding SalvarCommand}" 
+                        Text="Salvar" 
+                        BackgroundColor="LightGray"/>
             </StackLayout>
             <Label Text="Tarefas" HorizontalOptions="Center" FontAttributes="Bold" Font="24"/>
 
-            <ListView x:Name="ListaTarefas" ItemsSource="{Binding Tarefas}">
+            <ListView HasUnevenRows="True" x:Name="ListaTarefas" ItemsSource="{Binding Tarefas}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -35,7 +37,7 @@
                                           CommandParameter="{Binding .}"/>
                             </ViewCell.ContextActions>
 
-                            <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal" Padding="10, 5, 10, 5">
                                 <Label Text="{Binding Nome}" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
                                 <!--<Button Text="{Binding Concluido, Converter={StaticResource cvTarefa}}" 
                                         Command="{Binding Source={x:Reference XTarefaView}, Path=BindingContext.AlterarEstadoCommand}"  

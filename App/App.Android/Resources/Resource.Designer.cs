@@ -4316,6 +4316,9 @@ namespace App.Droid
 			// aapt resource value: 0x7f0b0172
 			public const int Base_Widget_Design_TabLayout = 2131427698;
 			
+			// aapt resource value: 0x7f0b018b
+			public const int BotaoSemSombras = 2131427723;
+			
 			// aapt resource value: 0x7f0b000b
 			public const int CardView = 2131427339;
 			
