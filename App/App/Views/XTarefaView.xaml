@@ -14,10 +14,14 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal" >
-                <Entry Text="{Binding TarefaAtual.Nome}" Placeholder="Nome Tarefa" HorizontalOptions="FillAndExpand"></Entry>
+                <Entry Text="{Binding TarefaAtual.Nome}" 
+                       Placeholder="Nome Tarefa"
+                       HorizontalOptions="FillAndExpand"
+                       HorizontalTextAlignment="Start"
+                       VerticalOptions="Center"/>
                 <Button Command="{Binding SalvarCommand}" Text="Salvar" />
             </StackLayout>
-            <Label Text="Tarefas" HorizontalOptions="Center" FontAttributes="Bold" Font="24"></Label>
+            <Label Text="Tarefas" HorizontalOptions="Center" FontAttributes="Bold" Font="24"/>
 
             <ListView x:Name="ListaTarefas" ItemsSource="{Binding Tarefas}">
                 <ListView.ItemTemplate>
@@ -33,9 +37,14 @@
 
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="{Binding Nome}" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
-                                <Button Text="{Binding Concluido, Converter={StaticResource cvTarefa}}" 
+                                <!--<Button Text="{Binding Concluido, Converter={StaticResource cvTarefa}}" 
                                         Command="{Binding Source={x:Reference XTarefaView}, Path=BindingContext.AlterarEstadoCommand}"  
-                                        CommandParameter="{Binding .}" HorizontalOptions="End" ></Button>
+                                        CommandParameter="{Binding .}" HorizontalOptions="End" />-->
+
+                                <Button Image="{Binding Concluido, Converter={StaticResource cvTarefa}}" 
+                                        BackgroundColor="Transparent"
+                                        Command="{Binding Source={x:Reference XTarefaView}, Path=BindingContext.AlterarEstadoCommand}"  
+                                        CommandParameter="{Binding .}" HorizontalOptions="End" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
