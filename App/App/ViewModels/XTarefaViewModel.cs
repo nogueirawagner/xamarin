@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace App.ViewModels
 {
-  public class XTarefaViewModel
+  public class XTarefaViewModel : INotifyPropertyChanged
   {
     public XITarefaDAL TarefaDAL { get; set; }
 
@@ -17,6 +17,8 @@ namespace App.ViewModels
     public Command SalvarCommand { get; set; }
     public Command EditarCommand { get; set; }
     public Command AlterarEstadoCommand { get; set; }
+    public Command RemoverCommand { get; set; }
+
 
     public XTarefaViewModel()
     {
@@ -25,32 +27,67 @@ namespace App.ViewModels
       TarefaAtual = new Tarefa();
       Tarefas = new ObservableCollection<Tarefa>(TarefaDAL.GetTarefas());
       SalvarCommand = new Command(Salvar);
-      EditarCommand = new Command(Editar);
-      AlterarEstadoCommand = new Command(AlterarEstado);
+      EditarCommand = new Command<Tarefa>(Editar);
+      AlterarEstadoCommand = new Command<Tarefa>(AlterarEstado);
+      RemoverCommand = new Command<Tarefa>(Remover);
+    }
 
+    private void Remover(Tarefa pTarefa)
+    {
+      TarefaDAL.Excluir(pTarefa);
+      Tarefas.Remove(pTarefa); // Melhor opção, pois não precisa de chamar serviço e recarregar dados.
+      //AtualizaListaTarefas();
     }
 
     private void Salvar()
     {
-      TarefaAtual.Concluido = false;
-      TarefaDAL.Salvar(TarefaAtual);
-      Tarefas.Add(TarefaAtual);
-      TarefaAtual = new Tarefa();
-    }
-
-    private void Editar()
-    {
-
-    }
-
-    private void AlterarEstado()
-    {
-      if (TarefaAtual.Concluido)
+      if(TarefaAtual.ID == 0)
+      {
         TarefaAtual.Concluido = false;
+        TarefaDAL.Salvar(TarefaAtual);
+        Tarefas.Add(TarefaAtual);
+      }
       else
-        TarefaAtual.Concluido = true;
-      TarefaDAL.Salvar(TarefaAtual);
+      {
+        TarefaDAL.Alterar(TarefaAtual);
+        AtualizaListaTarefas();
+      }
+
+      TarefaAtual = new Tarefa();
+      OnPropertyChanged("TarefaAtual");
     }
 
+    private void Editar(Tarefa pTarefa)
+    {
+      TarefaAtual = pTarefa;
+      OnPropertyChanged("TarefaAtual");
+    }
+
+    private void AlterarEstado(Tarefa pTarefa)
+    {
+      if (pTarefa.Concluido)
+        pTarefa.Concluido = false;
+      else
+        pTarefa.Concluido = true;
+
+      TarefaDAL.Alterar(pTarefa);
+      AtualizaListaTarefas();
+    }
+
+
+    private void AtualizaListaTarefas()
+    {
+      Tarefas = new ObservableCollection<Tarefa>(TarefaDAL.GetTarefas());
+      OnPropertyChanged("Tarefas");
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+    protected virtual void OnPropertyChanged([CallerMemberName] string pPropertyName = null)
+    {
+      PropertyChangedEventHandler handler = PropertyChanged;
+      if (handler != null)
+        handler(this, new PropertyChangedEventArgs(pPropertyName));
+
+    }
   }
 }

@@ -2,13 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App.Views.XTarefaView"
+             x:Name="XTarefaView"
+             Title="Manager Task"
              xmlns:convert="clr-namespace:App.Utils">
     <ContentPage.Resources>
         <ResourceDictionary>
             <convert:XTarefaConverter x:Key="cvTarefa"></convert:XTarefaConverter>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal" >
@@ -22,13 +24,18 @@
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.ContextActions>
-                                <MenuItem Text="Remover" CommandParameter="{Binding .}"/>
-                                <MenuItem Text="Editar" CommandParameter="{Binding .}"/>
+                                <MenuItem Text="Remover" Command="{Binding Source={x:Reference XTarefaView}, Path=BindingContext.RemoverCommand}" 
+                                          CommandParameter="{Binding .}"/>
+                                <MenuItem Text="Editar" 
+                                          Command="{Binding Source={x:Reference XTarefaView}, Path=BindingContext.EditarCommand}" 
+                                          CommandParameter="{Binding .}"/>
                             </ViewCell.ContextActions>
 
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="{Binding Nome}" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
-                                <Button Text="{Binding Concluido, Converter={StaticResource cvTarefa}}" Command="{Binding AlterarEstadoCommand}"  CommandParameter="{Binding .}" HorizontalOptions="End" ></Button>
+                                <Button Text="{Binding Concluido, Converter={StaticResource cvTarefa}}" 
+                                        Command="{Binding Source={x:Reference XTarefaView}, Path=BindingContext.AlterarEstadoCommand}"  
+                                        CommandParameter="{Binding .}" HorizontalOptions="End" ></Button>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
