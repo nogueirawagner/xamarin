@@ -44,7 +44,9 @@
                                 <Button Image="{Binding Concluido, Converter={StaticResource cvTarefa}}" 
                                         BackgroundColor="Transparent"
                                         Command="{Binding Source={x:Reference XTarefaView}, Path=BindingContext.AlterarEstadoCommand}"  
-                                        CommandParameter="{Binding .}" HorizontalOptions="End" />
+                                        CommandParameter="{Binding .}" 
+                                        HorizontalOptions="End"
+                                        BorderWidth="0"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
