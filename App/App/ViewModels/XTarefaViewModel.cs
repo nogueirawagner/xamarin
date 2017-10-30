@@ -1,9 +1,11 @@
-﻿using App.DAL.TarefaDAL;
+﻿using App.Commands.TarefaCmds;
+using App.DAL.TarefaDAL;
 using App.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace App.ViewModels
@@ -16,9 +18,8 @@ namespace App.ViewModels
     public ObservableCollection<Tarefa> Tarefas { get; set; }
     public Command SalvarCommand { get; set; }
     public Command EditarCommand { get; set; }
-    public Command AlterarEstadoCommand { get; set; }
+    public ICommand FinalizarCommand { get; set; }
     public Command RemoverCommand { get; set; }
-
 
     public XTarefaViewModel()
     {
@@ -28,8 +29,8 @@ namespace App.ViewModels
       Tarefas = new ObservableCollection<Tarefa>(TarefaDAL.GetTarefas());
       SalvarCommand = new Command(Salvar);
       EditarCommand = new Command<Tarefa>(Editar);
-      AlterarEstadoCommand = new Command<Tarefa>(AlterarEstado);
       RemoverCommand = new Command<Tarefa>(Remover);
+      FinalizarCommand = new XFinalizarCmd(this);
     }
 
     private void Remover(Tarefa pTarefa)
@@ -63,18 +64,6 @@ namespace App.ViewModels
       OnPropertyChanged("TarefaAtual");
     }
 
-    private void AlterarEstado(Tarefa pTarefa)
-    {
-      if (pTarefa.Concluido)
-        pTarefa.Concluido = false;
-      else
-        pTarefa.Concluido = true;
-
-      TarefaDAL.Alterar(pTarefa);
-      AtualizaListaTarefas();
-    }
-
-
     private void AtualizaListaTarefas()
     {
       Tarefas = new ObservableCollection<Tarefa>(TarefaDAL.GetTarefas());
@@ -82,12 +71,11 @@ namespace App.ViewModels
     }
 
     public event PropertyChangedEventHandler PropertyChanged;
-    protected virtual void OnPropertyChanged([CallerMemberName] string pPropertyName = null)
+    public virtual void OnPropertyChanged([CallerMemberName] string pPropertyName = null)
     {
       PropertyChangedEventHandler handler = PropertyChanged;
       if (handler != null)
         handler(this, new PropertyChangedEventArgs(pPropertyName));
-
     }
   }
 }

@@ -45,7 +45,7 @@
 
                                 <Button Image="{Binding Concluido, Converter={StaticResource cvTarefa}}" 
                                         BackgroundColor="Transparent"
-                                        Command="{Binding Source={x:Reference XTarefaView}, Path=BindingContext.AlterarEstadoCommand}"  
+                                        Command="{Binding Source={x:Reference XTarefaView}, Path=BindingContext.FinalizarCommand}"  
                                         CommandParameter="{Binding .}" 
                                         HorizontalOptions="End"
                                         BorderWidth="0"/>
