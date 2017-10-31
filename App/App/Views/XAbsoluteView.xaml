@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.Views.XAbsoluteView">
+
+    <AbsoluteLayout>
+        <BoxView Color="Yellow" AbsoluteLayout.LayoutBounds="40, 40, 30, 30" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        <BoxView Color="Green" AbsoluteLayout.LayoutBounds="60, 50, 50, 50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        <BoxView Color="Black"  AbsoluteLayout.LayoutBounds="180, 180, 20, 20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+    </AbsoluteLayout>
+
+    <AbsoluteLayout>
+        <BoxView Color="Red" AbsoluteLayout.LayoutBounds="300, 300, 30, 30" 
+                 AbsoluteLayout.LayoutFlags="HeightProportional" 
+                 HorizontalOptions="FillAndExpand" 
+                 VerticalOptions="FillAndExpand"/>
+        
+        <BoxView Color="Black"  AbsoluteLayout.LayoutBounds="180, 180, 20, 20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+    </AbsoluteLayout>
+
+
+</ContentPage>

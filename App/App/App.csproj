@@ -39,6 +39,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Commands\TarefaCmds\XFinalizarCmd.cs" />
+    <Compile Include="Commands\TarefaCmds\XSalvarCmd.cs" />
     <Compile Include="Commands\TarefaCmds\XTarefaCmdBase.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -51,6 +52,12 @@
     <Compile Include="Utils\XBooleanConvert.cs" />
     <Compile Include="Utils\XTarefaConverter.cs" />
     <Compile Include="ViewModels\XTarefaViewModel.cs" />
+    <Compile Include="Views\XAbsoluteView.xaml.cs">
+      <DependentUpon>XAbsoluteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\XStackView.xaml.cs">
+      <DependentUpon>XStackView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\XTarefaView.xaml.cs">
       <DependentUpon>XTarefaView.xaml</DependentUpon>
     </Compile>
@@ -96,6 +103,18 @@
     <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.4.0.18342\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\XStackView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\XAbsoluteView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.4.0.18342\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.18342\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />

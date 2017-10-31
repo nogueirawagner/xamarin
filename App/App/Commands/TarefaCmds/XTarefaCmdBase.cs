@@ -14,9 +14,7 @@ namespace App.Commands.TarefaCmds
     public XITarefaDAL TarefaDAL { get; set; }
 
     public event EventHandler CanExecuteChanged;
-
     public XTarefaViewModel TelaVM { get; set; }
-    public Tarefa Tarefa { get; set; }
 
     public virtual bool CanExecute(object pParameter)
     {

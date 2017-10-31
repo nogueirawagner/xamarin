@@ -10,7 +10,7 @@ namespace App
     {
       InitializeComponent();
 
-      MainPage = new NavigationPage(new XTarefaView());
+      MainPage = new NavigationPage(new XAbsoluteView());
     }
 
     protected override void OnStart()
