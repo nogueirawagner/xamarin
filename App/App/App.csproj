@@ -39,7 +39,6 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Commands\TarefaCmds\XFinalizarCmd.cs" />
-    <Compile Include="Commands\TarefaCmds\XSalvarCmd.cs" />
     <Compile Include="Commands\TarefaCmds\XTarefaCmdBase.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

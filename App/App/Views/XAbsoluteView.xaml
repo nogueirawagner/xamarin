@@ -4,18 +4,23 @@
              x:Class="App.Views.XAbsoluteView">
 
     <AbsoluteLayout>
-        <BoxView Color="Yellow" AbsoluteLayout.LayoutBounds="40, 40, 30, 30" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-        <BoxView Color="Green" AbsoluteLayout.LayoutBounds="60, 50, 50, 50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-        <BoxView Color="Black"  AbsoluteLayout.LayoutBounds="180, 180, 20, 20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        <BoxView Color="Yellow" AbsoluteLayout.LayoutBounds="0, 0, 30, 30" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        <BoxView Color="Black" AbsoluteLayout.LayoutBounds="40, 0, 40, 40" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        <BoxView Color="Aquamarine" AbsoluteLayout.LayoutBounds="50, 50, 300, 300" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        
     </AbsoluteLayout>
 
     <AbsoluteLayout>
-        <BoxView Color="Red" AbsoluteLayout.LayoutBounds="300, 300, 30, 30" 
-                 AbsoluteLayout.LayoutFlags="HeightProportional" 
+        <BoxView Color="Red" AbsoluteLayout.LayoutBounds="10, 10, 5, 5" 
+                 AbsoluteLayout.LayoutFlags="WidthProportional" 
                  HorizontalOptions="FillAndExpand" 
                  VerticalOptions="FillAndExpand"/>
         
-        <BoxView Color="Black"  AbsoluteLayout.LayoutBounds="180, 180, 20, 20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        <BoxView Color="Black"  
+                 AbsoluteLayout.LayoutBounds="180, 180, 20, 20" 
+                 AbsoluteLayout.LayoutFlags="All"
+                 HorizontalOptions="FillAndExpand" 
+                 VerticalOptions="FillAndExpand"/>
     </AbsoluteLayout>
 
 
