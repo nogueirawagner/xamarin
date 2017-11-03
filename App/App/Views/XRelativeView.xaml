@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.Views.XRelativeView">
+
+    <RelativeLayout>
+
+        <BoxView Color="Yellow" 
+                 x:Name="boxYellow"
+                 WidthRequest="50"
+                 HeightRequest="100" 
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.5, Constant=-100}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.5}">
+        </BoxView>
+
+
+        <BoxView Color="Blue"
+                 x:Name="boxBlue"
+                 WidthRequest="50" 
+                 HeightRequest="50" 
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=boxYellow, Property=Y}"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=boxYellow, Property=Width}"
+                 ></BoxView>
+        
+        
+        <BoxView Color="Green"
+                 x:Name="boxGreen"
+                 WidthRequest="50" 
+                 HeightRequest="50" 
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=boxBlue, Property=Y, Constant=50}"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=boxBlue, Property=X, Constant=50}"
+                 ></BoxView>
+
+        <BoxView Color="Black"
+            x:Name="boxBlack"
+            WidthRequest="50"
+            HeightRequest="50"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=boxBlue, Property=Y}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=boxGreen, Property=X, Constant=50}"
+            >
+            
+        </BoxView>
+        
+
+    </RelativeLayout>
+        
+</ContentPage>

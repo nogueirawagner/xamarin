@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.Views.XGridView">
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <BoxView Color="Aquamarine" Grid.Column="0" Grid.Row="0"></BoxView>
+        <BoxView Color="Black" Grid.Column="1" Grid.Row="0"></BoxView>
+        <BoxView Color="Beige" Grid.Column="2" Grid.Row="0"></BoxView>
+
+        <BoxView Color="Gainsboro" Grid.Column="0" Grid.Row="1"></BoxView>
+        <BoxView Color="DarkSlateGray" Grid.Column="1" Grid.Row="1"></BoxView>
+        <BoxView Color="LemonChiffon" Grid.Column="2" Grid.Row="1"></BoxView>
+
+        <BoxView Color="Navy" Grid.Column="0" Grid.Row="2"></BoxView>
+        <BoxView Color="Blue" Grid.Column="1" Grid.RowSpan="2"></BoxView>
+        <BoxView Color="Black" Grid.ColumnSpan="3" Grid.Row="2"></BoxView>
+        
+
+    </Grid>
+    
+</ContentPage>
