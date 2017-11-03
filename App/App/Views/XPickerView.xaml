@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.Views.XPickerView">
+
+
+    <StackLayout>
+        <Label Text="Qual sua cor preferida?"></Label>
+        <Picker>
+            <Picker.Items>
+                <x:String>Amarelo</x:String>
+                <x:String>Vermelho</x:String>
+                <x:String>Verde</x:String>
+                <x:String>Preto</x:String>
+                <x:String>Roxo</x:String>
+                <x:String>Branco</x:String>
+                <x:String>Lilas</x:String>
+                <x:String>Amarelo</x:String>
+                <x:String>Vermelho</x:String>
+                <x:String>Verde</x:String>
+                <x:String>Preto</x:String>
+                <x:String>Roxo</x:String>
+                <x:String>Branco</x:String>
+                <x:String>Lilas</x:String>
+                <x:String>Amarelo</x:String>
+                <x:String>Vermelho</x:String>
+                <x:String>Verde</x:String>
+                <x:String>Preto</x:String>
+                <x:String>Roxo</x:String>
+                <x:String>Branco</x:String>
+                <x:String>Amarelo</x:String>
+                <x:String>Vermelho</x:String>
+                <x:String>Verde</x:String>
+                <x:String>Preto</x:String>
+                <x:String>Roxo</x:String>
+                <x:String>Branco</x:String>
+
+                <x:String>Lilas</x:String>
+                <x:String>Lilas</x:String>
+            </Picker.Items>
+        </Picker>
+
+    </StackLayout>
+
+
+</ContentPage>
