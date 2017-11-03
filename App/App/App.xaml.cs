@@ -10,7 +10,7 @@ namespace App
     {
       InitializeComponent();
 
-      MainPage = new NavigationPage(new XRelativeView());
+      MainPage = new NavigationPage(new XScrollView());
     }
 
     protected override void OnStart()

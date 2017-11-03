@@ -60,6 +60,9 @@
     <Compile Include="Views\XRelativeView.xaml.cs">
       <DependentUpon>XRelativeView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\XScrollView.xaml.cs">
+      <DependentUpon>XScrollView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\XStackView.xaml.cs">
       <DependentUpon>XStackView.xaml</DependentUpon>
     </Compile>
@@ -129,6 +132,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\XRelativeView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\XScrollView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
