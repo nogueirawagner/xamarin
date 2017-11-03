@@ -19,7 +19,7 @@ namespace App.Views
 
     private void Switch_Toggled(object sender, ToggledEventArgs e)
     {
-      txt
+      txtSwitch.Text = e.Value.ToString();
 
     }
   }
