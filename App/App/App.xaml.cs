@@ -10,7 +10,7 @@ namespace App
     {
       InitializeComponent();
 
-      MainPage = new NavigationPage(new XSwitchView());
+      MainPage = new NavigationPage(new XWebView());
     }
 
     protected override void OnStart()

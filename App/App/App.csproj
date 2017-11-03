@@ -51,6 +51,9 @@
     <Compile Include="Utils\XBooleanConvert.cs" />
     <Compile Include="Utils\XTarefaConverter.cs" />
     <Compile Include="ViewModels\XTarefaViewModel.cs" />
+    <Compile Include="Views\XImagemView.xaml.cs">
+      <DependentUpon>XImagemView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\XPickerView.xaml.cs">
       <DependentUpon>XPickerView.xaml</DependentUpon>
     </Compile>
@@ -92,6 +95,9 @@
     </Compile>
     <Compile Include="Views\XTextView.xaml.cs">
       <DependentUpon>XTextView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\XWebView.xaml.cs">
+      <DependentUpon>XWebView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -210,6 +216,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\XSwitchView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\XImagemView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\XWebView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
