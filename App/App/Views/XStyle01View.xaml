@@ -24,11 +24,12 @@
     <ContentPage.Content>
         <StackLayout>
             <Label  Style="{StaticResource lblStyle}" Text="Nome" />
-            <Entry Placeholder="Digite seu nome" PlaceholderColor="Blue"/>
-            <Button Text="Enviar" BackgroundColor="CadetBlue"/>
+            <Entry Placeholder="Digite seu nome"/>
 
             <Label Text="Resultado" Style="{StaticResource lblStyle}"/>
             <Label Text="Padrão"/>
+
+            <Entry Placeholder="Estilo global"/>
         </StackLayout>
     </ContentPage.Content>
 
