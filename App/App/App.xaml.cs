@@ -1,6 +1,7 @@
 ﻿
 using App.Views;
 using App.Views.NavigationPage;
+using App.Views.Notification;
 using App.Views.PaginaCarousel;
 using App.Views.PaginaEmAbas;
 using App.Views.PaginaMaster;
@@ -15,7 +16,7 @@ namespace App
     {
       InitializeComponent();
 
-      MainPage = new NavigationPage(new XCEPView());
+      MainPage = new NavigationPage(new XNotificationView());
       //MainPage = new XCarouselPage(); Pagina em carousel
       //MainPage = new XAba01View(); Pagina em abas
     }
