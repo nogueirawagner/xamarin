@@ -51,6 +51,9 @@
     <Compile Include="Utils\XBooleanConvert.cs" />
     <Compile Include="Utils\XTarefaConverter.cs" />
     <Compile Include="ViewModels\XTarefaViewModel.cs" />
+    <Compile Include="Views\PaginaCarousel\XCarouselPage.xaml.cs">
+      <DependentUpon>XCarouselPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\NavigationPage\XPage01View.xaml.cs">
       <DependentUpon>XPage01View.xaml</DependentUpon>
     </Compile>
@@ -327,6 +330,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\PaginaEmAbas\XConteudo05View.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PaginaCarousel\XCarouselPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

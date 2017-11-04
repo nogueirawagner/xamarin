@@ -1,6 +1,7 @@
 ﻿
 using App.Views;
 using App.Views.NavigationPage;
+using App.Views.PaginaCarousel;
 using App.Views.PaginaEmAbas;
 using Xamarin.Forms;
 
@@ -12,7 +13,8 @@ namespace App
     {
       InitializeComponent();
 
-      MainPage = new XAba01View();
+      MainPage = new XCarouselPage();
+      //MainPage = new XAba01View(); Em abas
     }
 
     protected override void OnStart()
