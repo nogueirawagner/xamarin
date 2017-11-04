@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace App.Views.PaginaEmAbas
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class XAba01View : ContentPage
+	public partial class XAba01View : TabbedPage
 	{
 		public XAba01View ()
 		{

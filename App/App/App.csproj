@@ -63,8 +63,20 @@
     <Compile Include="Views\PaginaEmAbas\XAba02View.xaml.cs">
       <DependentUpon>XAba02View.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\PaginaEmAbas\XAba03View.xaml.cs">
-      <DependentUpon>XAba03View.xaml</DependentUpon>
+    <Compile Include="Views\PaginaEmAbas\XConteudo01View.xaml.cs">
+      <DependentUpon>XConteudo01View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PaginaEmAbas\XConteudo02View.xaml.cs">
+      <DependentUpon>XConteudo02View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PaginaEmAbas\XConteudo03View.xaml.cs">
+      <DependentUpon>XConteudo03View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PaginaEmAbas\XConteudo04View.xaml.cs">
+      <DependentUpon>XConteudo04View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PaginaEmAbas\XConteudo05View.xaml.cs">
+      <DependentUpon>XConteudo05View.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\XImagemView.xaml.cs">
       <DependentUpon>XImagemView.xaml</DependentUpon>
@@ -284,13 +296,37 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Views\PaginaEmAbas\XConteudo01View.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PaginaEmAbas\XConteudo02View.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="Views\PaginaEmAbas\XAba02View.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\PaginaEmAbas\XAba03View.xaml">
+    <EmbeddedResource Include="Views\PaginaEmAbas\XConteudo03View.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PaginaEmAbas\XConteudo04View.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PaginaEmAbas\XConteudo05View.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
