@@ -4,6 +4,7 @@ using App.Views.NavigationPage;
 using App.Views.PaginaCarousel;
 using App.Views.PaginaEmAbas;
 using App.Views.PaginaMaster;
+using App.Views.RestFull;
 using Xamarin.Forms;
 
 namespace App
@@ -14,7 +15,7 @@ namespace App
     {
       InitializeComponent();
 
-      MainPage = new XPaginaMaster();
+      MainPage = new NavigationPage(new XCEPView());
       //MainPage = new XCarouselPage(); Pagina em carousel
       //MainPage = new XAba01View(); Pagina em abas
     }

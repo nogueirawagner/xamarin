@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.Views.RestFull.XCEPView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Digite o CEP" />
+            <Entry x:Name="txtCEP" Placeholder="Digite o CEP" Keyboard="Numeric"/>
+            <Button Text="Buscar CEP" Clicked="Button_Clicked"/>
+
+            <Label x:Name="txtResultado"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
