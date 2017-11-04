@@ -4,14 +4,14 @@
              x:Class="App.App">
     <Application.Resources>
 
-        <ResourceDictionary>
+        <!--<ResourceDictionary>
             <Style TargetType="Entry">
                 <Setter Property="TextColor" Value="Gray"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
                 <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
                 <Setter Property="BackgroundColor" Value="Brown"/>
             </Style>
-        </ResourceDictionary>
+        </ResourceDictionary>-->
 
     </Application.Resources>
 </Application>

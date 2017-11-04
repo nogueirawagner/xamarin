@@ -81,6 +81,9 @@
     <Compile Include="Views\PaginaEmAbas\XConteudo05View.xaml.cs">
       <DependentUpon>XConteudo05View.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\PaginaMaster\XPaginaMaster.xaml.cs">
+      <DependentUpon>XPaginaMaster.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\XImagemView.xaml.cs">
       <DependentUpon>XImagemView.xaml</DependentUpon>
     </Compile>
@@ -336,6 +339,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\PaginaCarousel\XCarouselPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PaginaMaster\XPaginaMaster.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
