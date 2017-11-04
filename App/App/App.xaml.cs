@@ -10,7 +10,7 @@ namespace App
     {
       InitializeComponent();
 
-      MainPage = new NavigationPage(new XOnPlatform());
+      MainPage = new NavigationPage(new XStyle01View());
     }
 
     protected override void OnStart()

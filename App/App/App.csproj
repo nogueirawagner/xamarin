@@ -87,6 +87,9 @@
     <Compile Include="Views\XStackView.xaml.cs">
       <DependentUpon>XStackView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\XStyle01View.xaml.cs">
+      <DependentUpon>XStyle01View.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\XSwitchView.xaml.cs">
       <DependentUpon>XSwitchView.xaml</DependentUpon>
     </Compile>
@@ -237,6 +240,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\XOnPlatform.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\XStyle01View.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
