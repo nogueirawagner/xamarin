@@ -52,16 +52,22 @@
     <Compile Include="Utils\XBooleanConvert.cs" />
     <Compile Include="Utils\XTarefaConverter.cs" />
     <Compile Include="ViewModels\XTarefaViewModel.cs" />
+    <Compile Include="Views\NavigationPush\XNavigationPushModal.xaml.cs">
+      <DependentUpon>XNavigationPushModal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NavigationPush\XPage01View.xaml.cs">
+      <DependentUpon>XPage01View.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Notification\XNotificationView.xaml.cs">
       <DependentUpon>XNotificationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PaginaCarousel\XCarouselPage.xaml.cs">
       <DependentUpon>XCarouselPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\NavigationPage\XPage01View.xaml.cs">
+    <Compile Include="Views\NavPage\XPage01View.xaml.cs">
       <DependentUpon>XPage01View.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\NavigationPage\XPage02View.xaml.cs">
+    <Compile Include="Views\NavPage\XPage02View.xaml.cs">
       <DependentUpon>XPage02View.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PaginaEmAbas\XAba01View.xaml.cs">
@@ -300,13 +306,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\NavigationPage\XPage01View.xaml">
+    <EmbeddedResource Include="Views\NavPage\XPage01View.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\NavigationPage\XPage02View.xaml">
+    <EmbeddedResource Include="Views\NavPage\XPage02View.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -373,6 +379,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\Notification\XNotificationView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\NavigationPush\XNavigationPushModal.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\NavigationPush\XPage01View.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

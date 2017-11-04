@@ -7,19 +7,20 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace App.Views.NavigationPage
+namespace App.Views.NavPage
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class XPage01View : ContentPage
+	public partial class XPage02View : ContentPage
 	{
-		public XPage01View ()
+		public XPage02View ()
 		{
 			InitializeComponent ();
 		}
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-      Navigation.PushAsync(new XPage02View());
+      Navigation.PushAsync(new XPage01View());
+
     }
   }
 }
